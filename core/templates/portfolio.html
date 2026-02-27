@@ -1,0 +1,129 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Collections - Nexa
+Fashion House{% endblock %} {% block content %}
+<main class="main">
+  <!-- Page Title -->
+  <div class="page-title dark-background" data-aos="fade">
+    <div class="container position-relative">
+      <h1>Our Collections</h1>
+      <p>A journey through our most iconic seasons and visionary designs.</p>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Collections</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
+
+  <!-- Portfolio Grid Section -->
+  <section id="portfolio" class="portfolio section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-item">
+            <img
+              src="{% static 'img/portfolio/portfolio-3.webp' %}"
+              class="img-fluid"
+              alt="Midnight Velvet"
+            />
+            <div class="portfolio-info">
+              <h4>Midnight Velvet</h4>
+              <p>Evening Couture</p>
+              <a href="{% url 'core:portfolio-details' %}" class="details-link"
+                ><i class="bi bi-link-45deg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-item">
+            <img
+              src="{% static 'img/portfolio/portfolio-7.webp' %}"
+              class="img-fluid"
+              alt="Ethereal Silk"
+            />
+            <div class="portfolio-info">
+              <h4>Ethereal Silk</h4>
+              <p>Avant-Garde</p>
+              <a href="{% url 'core:portfolio-details' %}" class="details-link"
+                ><i class="bi bi-link-45deg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-item">
+            <img
+              src="{% static 'img/portfolio/portfolio-8.webp' %}"
+              class="img-fluid"
+              alt="Urban Chic"
+            />
+            <div class="portfolio-info">
+              <h4>Urban Chic</h4>
+              <p>Ready-To-Wear</p>
+              <a href="{% url 'core:portfolio-details' %}" class="details-link"
+                ><i class="bi bi-link-45deg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-item">
+            <img
+              src="{% static 'img/portfolio/portfolio-9.webp' %}"
+              class="img-fluid"
+              alt="Golden Sands"
+            />
+            <div class="portfolio-info">
+              <h4>Golden Sands</h4>
+              <p>Resort Wear</p>
+              <a href="{% url 'core:portfolio-details' %}" class="details-link"
+                ><i class="bi bi-link-45deg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-item">
+            <img
+              src="{% static 'img/portfolio/portfolio-10.webp' %}"
+              class="img-fluid"
+              alt="Artisan Leather"
+            />
+            <div class="portfolio-info">
+              <h4>Artisan Leather</h4>
+              <p>Accessories</p>
+              <a href="{% url 'core:portfolio-details' %}" class="details-link"
+                ><i class="bi bi-link-45deg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-item">
+            <img
+              src="{% static 'img/portfolio/portfolio-11.webp' %}"
+              class="img-fluid"
+              alt="Bridal Elegance"
+            />
+            <div class="portfolio-info">
+              <h4>Bridal Elegance</h4>
+              <p>Luxury Wedding</p>
+              <a href="{% url 'core:portfolio-details' %}" class="details-link"
+                ><i class="bi bi-link-45deg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Portfolio Grid Section -->
+</main>
+{% endblock %}

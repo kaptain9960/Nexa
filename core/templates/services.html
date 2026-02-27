@@ -1,0 +1,99 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Our Services - Nexa
+Fashion House{% endblock %} {% block content %}
+<main class="main">
+  <!-- Page Title -->
+  <div class="page-title dark-background" data-aos="fade">
+    <div class="container position-relative">
+      <h1>Our Services</h1>
+      <p>Luxury craftsmanship and personalized style solutions.</p>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Services</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
+
+  <!-- Services Grid Section -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="bi bi-scissors"></i>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Bespoke Tailoring</h3>
+              <p class="service-text">
+                Garments masterfully crafted to your exact proportions, using
+                the finest materials sourced from historic mills.
+              </p>
+              <a href="{% url 'core:service-details' %}" class="service-link"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="bi bi-stars"></i>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Personal Styling</h3>
+              <p class="service-text">
+                Dedicated style consultants to help you curate a cohesive
+                wardrobe that captures your personal aesthetic.
+              </p>
+              <a href="{% url 'core:service-details' %}" class="service-link"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="bi bi-gem"></i>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Private Curation</h3>
+              <p class="service-text">
+                Exclusive access to limited-edition runway pieces and rare
+                accessories before they reach our flagship galleries.
+              </p>
+              <a href="{% url 'core:service-details' %}" class="service-link"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="bi bi-camera-reels"></i>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Events & Trunk Shows</h3>
+              <p class="service-text">
+                Be a part of our immersive fashion experiences, from private
+                atelier viewings to global runway events.
+              </p>
+              <a href="{% url 'core:service-details' %}" class="service-link"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Services Grid Section -->
+</main>
+{% endblock %}

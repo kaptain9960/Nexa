@@ -1,0 +1,83 @@
+{% extends 'base.html' %} {% load static %} {% block title %}About Us - Nexa
+Fashion House{% endblock %} {% block content %}
+<main class="main">
+  <!-- Page Title -->
+  <div class="page-title" data-aos="fade">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">About Our House</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">About</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <img
+            src="{% static 'img/about/senator.jpeg' %}"
+            class="img-fluid rounded-4 mb-4"
+            alt="Heritage"
+          />
+          <h3>The Legacy of Nexa</h3>
+          <p>
+            Founded with a passion for exquisite design, Nexa Fashion House has
+            evolved from a bespoke studio into a world-renowned icon of
+            elegance. Our mission has always been to redefine luxury through a
+            blend of heritage techniques and avant-garde vision.
+          </p>
+          <p>
+            Every piece we create is a testament to our commitment to quality,
+            sustainability, and the empowerment of individuality.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="content ps-0 ps-lg-5">
+            <p class="fst-italic">
+              "Fashion is not just what you wear; it is an extension of your
+              soul." — The Founder
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Meticulously sourced sustainable fabrics.</span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Hand-stitched precision by master artisans.</span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span
+                  >Visionary designs that anticipate tomorrow's trends.</span
+                >
+              </li>
+            </ul>
+            <p>
+              Over the decades, we have mentored thousands of artisans and
+              collaborated with iconic figures to push the boundaries of style.
+              Today, Nexa continues to lead the industry with a focus on ethical
+              luxury and inclusive elegance.
+            </p>
+
+            <div class="active-video-btn mt-4">
+              <a
+                href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                class="glightbox btn btn-outline-primary rounded-pill px-4 py-2"
+              >
+                <i class="bi bi-play-fill me-2"></i> Watch Our Story
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
