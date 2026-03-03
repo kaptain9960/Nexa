@@ -2509,6 +2509,14 @@ section,
   opacity: 0.8;
 }
 
+.contact .info-card .card-content p a {
+  color: #ffffff;
+}
+
+.contact .info-card .card-content p a:hover {
+  color: color-mix(in srgb, #ffffff, transparent 25%);
+}
+
 .contact .social-links-panel {
   margin-top: 35px;
 }

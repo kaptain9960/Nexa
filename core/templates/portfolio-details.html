@@ -8,10 +8,46 @@
 {% block content %}
 <main class="main">
   <!-- Page Title -->
-  <div class="page-title dark-background">
+  <div class="page-title dark-background" data-aos="fade">
     <div class="container position-relative">
-      <h1>Portfolio Details</h1>
-      <nav class="breadcrumbs">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-8">
+          <div class="page-title-content">
+            <h1 class="display-3 fw-bold mb-4 text-white">Collection Details</h1>
+            <p class="lead text-light fw-light mb-4">
+              Explore the intricate details and craftsmanship behind our exclusive collections.
+            </p>
+            <div class="d-flex gap-3 align-items-center">
+              <div
+                class="accent-line"
+                style="
+                  width: 50px;
+                  height: 3px;
+                  background: linear-gradient(
+                    90deg,
+                    #d4af37 0%,
+                    transparent 100%
+                  );
+                "
+              ></div>
+              <span
+                class="text-uppercase fw-semibold letter-spacing"
+                style="letter-spacing: 2px; color: #d4af37; font-size: 0.85rem"
+                >In-Depth Look</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-flex justify-content-end">
+          <div
+            class="decorative-element"
+            style="font-size: 150px; opacity: 0.1; line-height: 1"
+          >
+            💎
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs mt-4">
         <ol>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'core:portfolio' %}">Portfolio</a></li>
@@ -49,17 +85,17 @@
 
         <div class="col-lg-3">
           <div class="portfolio-info">
-            <h3>Project Information</h3>
+            <h3>Collection Details</h3>
             <ul>
-              <li><strong>Category</strong>: Web Design</li>
-              <li><strong>Client</strong>: ABC Corporation</li>
-              <li><strong>Project Date</strong>: January 2024</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Season</strong>: Spring/Summer 2024</li>
+              <li><strong>Collection Name</strong>: Midnight Velvet</li>
+              <li><strong>Launch Date</strong>: March 2024</li>
+              <li><strong>Collection Type</strong>: Evening Couture</li>
             </ul>
           </div>
           <div class="portfolio-description mt-4">
-            <h4>Project Description</h4>
-            <p>This project showcases our expertise in creating modern, responsive web designs that align with client objectives and user expectations.</p>
+            <h4>Collection Inspiration</h4>
+            <p>This exclusive collection draws inspiration from the elegance of twilight, combining luxurious velvet fabrics with innovative cutting techniques. Each piece tells a story of sophistication and timeless beauty.</p>
           </div>
         </div>
       </div>
@@ -223,7 +259,6 @@
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -241,8 +276,8 @@
           <i class="bi bi-geo-alt icon"></i>
           <div class="address">
             <h4>Address</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
+            <p>Immigration quarters, Sauka</p>
+            <p>Abuja, Nigeria.</p>
             <p></p>
           </div>
 
@@ -253,8 +288,8 @@
           <div>
             <h4>Contact</h4>
             <p>
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span><br>
-              <strong>Email:</strong> <span>info@example.com</span><br>
+              <strong>Phone:</strong> <span>+(234)9031109347</span><br>
+              <strong>Email:</strong> <span>divineigwesi1184@gmail.com</span><br>
             </p>
           </div>
         </div>

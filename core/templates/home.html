@@ -22,7 +22,9 @@
             </p>
 
             <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
-              <a href="#about" class="btn btn-primary">Start Your Journey</a>
+              <a href="{% url 'core:about_view' %}" class="btn btn-primary">Start Your Journey</a>
+
+              <!-- need to change the video link later -->
               <a
                 href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
                 class="btn btn-outline glightbox"
@@ -44,7 +46,7 @@
           >
             <div class="hero-image">
               <img
-                src="{% static 'img/about/senator.jpeg' %}"" alt="Luxury Fashion"
+                src="{% static 'img/about/senator.jpeg' %}" alt="Luxury Fashion"
                 class="img-fluid"
               />
               <div class="image-decoration"></div>
@@ -69,7 +71,7 @@
                 ></span
                 >+
               </h3>
-              <p>Awards Won</p>
+              <p>Connections</p>
             </div>
             <div class="stat-item">
               <div class="stat-icon">
@@ -108,7 +110,7 @@
               <h3>
                 <span
                   data-purecounter-start="0"
-                  data-purecounter-end="12"
+                  data-purecounter-end="5"
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span
@@ -141,7 +143,7 @@
           <div class="image-wrapper">
             <div class="image-box">
               <img
-                src="{% static 'img/about/senator_2.jpeg' %}""
+                src="{% static 'img/about/senator_2.jpeg' %}"
                 class="img-fluid"
                 alt="Craftmanship"
                 loading="lazy"
@@ -203,7 +205,7 @@
             </div>
 
             <div class="cta-buttons">
-              <a href="#" class="btn-learn-more">Learn More</a>
+              <a href="{% url 'core:about_view' %}" class="btn-learn-more">Learn More</a>
               <a href="#" class="btn-get-started">Get Started</a>
             </div>
           </div>
@@ -1018,8 +1020,7 @@
       <span class="description-title">Team</span>
       <h2>Team</h2>
       <p>
-        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-        consectetur velit
+        Meet the creative minds and talented professionals who bring Nexa Fashion House to life.
       </p>
     </div>
     <!-- End Section Title -->
@@ -1045,10 +1046,9 @@
             </div>
             <div class="member-info">
               <h4>Emma Rodriguez</h4>
-              <span>Senior Developer</span>
+              <span>Head Designer</span>
               <p>
-                Sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                Visionary designer with 12 years of experience in haute couture. Emma leads our design philosophy, blending innovation with timeless elegance to create iconic pieces.
               </p>
             </div>
           </div>
@@ -1076,8 +1076,7 @@
               <h4>Michael Torres</h4>
               <span>Creative Director</span>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                Pellentesque habitant morbi tristique senectus et netus.
+                Leads our creative vision with innovative design concepts and trend forecasting. With a passion for bold aesthetics and sustainable fashion practices.
               </p>
             </div>
           </div>
@@ -1103,10 +1102,38 @@
             </div>
             <div class="member-info">
               <h4>Sarah Mitchell</h4>
-              <span>Project Manager</span>
+              <span>Collection Manager</span>
               <p>
-                Ut enim ad minim veniam quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.
+                Oversees our seasonal collections ensuring exceptional quality and timely delivery. Specializes in sourcing premium fabrics and managing production timelines across global partners.
+              </p>
+            </div>
+          </div>
+          <!-- End Team Member -->
+        </div>
+
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="team-member">
+            <div class="member-image">
+              <img
+                src="{% static 'img/person/person-f-11.webp' %}"
+                class="img-fluid"
+                alt=""
+                loading="lazy"
+              />
+              <div class="social-overlay">
+                <div class="social-icons">
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Sarah Mitchell</h4>
+              <span>Collection Manager</span>
+              <p>
+                Oversees our seasonal collections ensuring exceptional quality and timely delivery. Specializes in sourcing premium fabrics and managing production timelines across global partners.
               </p>
             </div>
           </div>
@@ -1132,10 +1159,9 @@
             </div>
             <div class="member-info">
               <h4>David Kim</h4>
-              <span>Business Analyst</span>
+              <span>Fashion Strategist</span>
               <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur excepteur.
+                Drives market insights and brand positioning with deep industry expertise. Helps us stay ahead of fashion trends and understand customer preferences globally.
               </p>
             </div>
           </div>
@@ -1160,45 +1186,20 @@
               </div>
             </div>
             <div class="member-info">
+            <div class="member-info">
               <h4>Lisa Chang</h4>
-              <span>Marketing Lead</span>
+              <span>Brand Director</span>
               <p>
-                Excepteur sint occaecat cupidatat non proident sunt in culpa qui
-                officia deserunt mollit anim id est laborum.
+                Crafts compelling brand narratives and manages our digital presence across all platforms. Passionate about storytelling and building meaningful connections with our community.
               </p>
             </div>
-          </div>
           <!-- End Team Member -->
         </div>
 
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="team-member">
-            <div class="member-image">
-              <img
-                src="{% static 'img/person/person-m-15.webp' %}"
-                class="img-fluid"
-                alt=""
-                loading="lazy"
-              />
-              <div class="social-overlay">
-                <div class="social-icons">
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Ryan Cooper</h4>
-              <span>Software Engineer</span>
-              <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque.
-              </p>
-            </div>
-          </div>
-          <!-- End Team Member -->
-        </div>
+        
+
+        
+
       </div>
     </div>
   </section>
@@ -1211,8 +1212,7 @@
       <span class="description-title">Pricing</span>
       <h2>Pricing</h2>
       <p>
-        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-        consectetur velit
+        We don't just deliver quatity design and finished work, we have flexible and pocket friendly prices.
       </p>
     </div>
     <!-- End Section Title -->
@@ -1231,24 +1231,19 @@
             </div>
             <ul class="features-list">
               <li>
-                <i class="bi bi-check-circle-fill"></i> Donec volutpat metus in
-                erat
+                <i class="bi bi-check-circle-fill"></i> Personal style consultation
               </li>
               <li>
-                <i class="bi bi-check-circle-fill"></i> Vestibulum ut erat
-                consectetur
+                <i class="bi bi-check-circle-fill"></i> Access to seasonal collection preview
               </li>
               <li>
-                <i class="bi bi-check-circle-fill"></i> Curabitur pretium orci
-                sed metus
+                <i class="bi bi-check-circle-fill"></i> 15% discount on all items
               </li>
               <li class="disabled">
-                <i class="bi bi-x-circle-fill"></i> Vivamus tincidunt risus
-                ipsum
+                <i class="bi bi-x-circle-fill"></i> Priority customer service
               </li>
               <li class="disabled">
-                <i class="bi bi-x-circle-fill"></i> Nullam lobortis nulla in
-                diam
+                <i class="bi bi-x-circle-fill"></i> Free alterations and tailoring
               </li>
             </ul>
             <div class="text-center">
@@ -1269,24 +1264,19 @@
             </div>
             <ul class="features-list">
               <li>
-                <i class="bi bi-check-circle-fill"></i> Donec volutpat metus in
-                erat
+                <i class="bi bi-check-circle-fill"></i> Personal style consultation
               </li>
               <li>
-                <i class="bi bi-check-circle-fill"></i> Vestibulum ut erat
-                consectetur
+                <i class="bi bi-check-circle-fill"></i> Access to seasonal collection preview
               </li>
               <li>
-                <i class="bi bi-check-circle-fill"></i> Curabitur pretium orci
-                sed metus
+                <i class="bi bi-check-circle-fill"></i> 25% discount on all items
               </li>
               <li>
-                <i class="bi bi-check-circle-fill"></i> Vivamus tincidunt risus
-                ipsum
+                <i class="bi bi-check-circle-fill"></i> Priority customer service
               </li>
               <li class="disabled">
-                <i class="bi bi-x-circle-fill"></i> Nullam lobortis nulla in
-                diam
+                <i class="bi bi-x-circle-fill"></i> Free alterations and tailoring
               </li>
             </ul>
             <div class="text-center">
@@ -1307,24 +1297,19 @@
             </div>
             <ul class="features-list">
               <li>
-                <i class="bi bi-check-circle-fill"></i> Donec volutpat metus in
-                erat
+                <i class="bi bi-check-circle-fill"></i> Personal style consultation
               </li>
               <li>
-                <i class="bi bi-check-circle-fill"></i> Vestibulum ut erat
-                consectetur
+                <i class="bi bi-check-circle-fill"></i> Access to seasonal collection preview
               </li>
               <li>
-                <i class="bi bi-check-circle-fill"></i> Curabitur pretium orci
-                sed metus
+                <i class="bi bi-check-circle-fill"></i> 35% discount on all items
               </li>
               <li>
-                <i class="bi bi-check-circle-fill"></i> Vivamus tincidunt risus
-                ipsum
+                <i class="bi bi-check-circle-fill"></i> Priority customer service
               </li>
               <li>
-                <i class="bi bi-check-circle-fill"></i> Nullam lobortis nulla in
-                diam
+                <i class="bi bi-check-circle-fill"></i> Free alterations and tailoring
               </li>
             </ul>
             <div class="text-center">
@@ -1349,7 +1334,7 @@
                   <i class="bi bi-question-circle"></i>
                 </div>
                 <h4>
-                  Mauris blandit aliquet elit, eget tincidunt nibh pulvinar?
+                  What makes Nexa Fashion House different from other brands?
                 </h4>
                 <div class="faq-toggle">
                   <i class="bi bi-plus"></i>
@@ -1359,9 +1344,7 @@
               <div class="faq-content">
                 <div class="content-inner">
                   <p>
-                    Pellentesque habitant morbi tristique senectus et netus et
-                    malesuada fames ac turpis egestas. Vestibulum tortor quam,
-                    feugiat vitae, ultricies eget, tempor sit amet, ante.
+                    We combine timeless craftsmanship with contemporary design philosophy. Our pieces are ethically sourced, sustainably produced, and crafted to last. Every collection tells a unique story and celebrates individuality.
                   </p>
                 </div>
               </div>
@@ -1374,8 +1357,7 @@
                   <i class="bi bi-question-circle"></i>
                 </div>
                 <h4>
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                  sem?
+                  How can I order custom tailored pieces from your collections?
                 </h4>
                 <div class="faq-toggle">
                   <i class="bi bi-plus"></i>
@@ -1385,10 +1367,7 @@
               <div class="faq-content">
                 <div class="content-inner">
                   <p>
-                    Donec rutrum congue leo eget malesuada. Sed porttitor lectus
-                    nibh. Vestibulum ac diam sit amet quam vehicula elementum
-                    sed sit amet dui. Proin eget tortor risus. Curabitur aliquet
-                    quam id dui posuere blandit.
+                    Visit our bespoke tailoring section or contact our style consultants directly. We'll arrange a consultation to discuss your preferences, take measurements, and create a custom piece that perfectly suits your unique style and body.
                   </p>
                 </div>
               </div>
@@ -1400,7 +1379,7 @@
                 <div class="faq-icon">
                   <i class="bi bi-question-circle"></i>
                 </div>
-                <h4>Vestibulum ante ipsum primis in faucibus orci luctus?</h4>
+                <h4>What is your return and exchange policy?</h4>
                 <div class="faq-toggle">
                   <i class="bi bi-plus"></i>
                   <i class="bi bi-dash"></i>
@@ -1409,10 +1388,7 @@
               <div class="faq-content">
                 <div class="content-inner">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
+                    We offer a 30-day return policy for all items in original condition with tags attached. Custom pieces and tailored garments are final sales. Contact our customer service team for returns, exchanges, or if you need any assistance with your purchase.
                   </p>
                 </div>
               </div>
@@ -1424,7 +1400,7 @@
                 <div class="faq-icon">
                   <i class="bi bi-question-circle"></i>
                 </div>
-                <h4>Nulla facilisi morbi tempus iaculis urna id volutpat?</h4>
+                <h4>Do you offer international shipping?</h4>
                 <div class="faq-toggle">
                   <i class="bi bi-plus"></i>
                   <i class="bi bi-dash"></i>
@@ -1433,9 +1409,7 @@
               <div class="faq-content">
                 <div class="content-inner">
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium. Totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis.
+                    Yes! We ship to over 50 countries worldwide. Shipping times vary by location, typically 7-14 business days. International orders may be subject to customs duties. We provide tracking information for all shipments.
                   </p>
                 </div>
               </div>
@@ -1447,7 +1421,7 @@
                 <div class="faq-icon">
                   <i class="bi bi-question-circle"></i>
                 </div>
-                <h4>Praesent sapien massa, convallis a pellentesque nec?</h4>
+                <h4>How can I stay updated on new collections and promotions?</h4>
                 <div class="faq-toggle">
                   <i class="bi bi-plus"></i>
                   <i class="bi bi-dash"></i>
@@ -1456,9 +1430,7 @@
               <div class="faq-content">
                 <div class="content-inner">
                   <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas molestias excepturi sint.
+                    Subscribe to our newsletter at the bottom of the page to receive exclusive previews, style tips, and special discounts. Follow us on social media for daily fashion inspiration and behind-the-scenes content from our creative studio.
                   </p>
                 </div>
               </div>
@@ -1478,8 +1450,7 @@
       <span class="description-title">Contact</span>
       <h2>Contact</h2>
       <p>
-        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-        consectetur velit
+        Reach out to our team to discuss your styling needs, custom orders, or any questions about our collections. We're here to help you find your perfect look.
       </p>
     </div>
     <!-- End Section Title -->
@@ -1490,8 +1461,7 @@
           <div class="contact-info-header">
             <h3>Contact Information</h3>
             <p>
-              Dignissimos deleniti accusamus rerum voluptate. Dignissimos rerum
-              sit maiores reiciendis voluptate inventore ut.
+              Connect with our fashion experts for personalized styling consultations, custom orders, and exclusive preview access to upcoming collections.
             </p>
           </div>
 
@@ -1512,7 +1482,7 @@
               </div>
               <div class="card-content">
                 <h4>Email Us</h4>
-                <p>info@example.com</p>
+                <p>divineigwesi1184@gmail.com</p>
               </div>
             </div>
 
@@ -1522,7 +1492,8 @@
               </div>
               <div class="card-content">
                 <h4>Call Us</h4>
-                <p>+1 (555) 123-4567</p>
+                <p>+(234)8032882203</p>
+                <p>+(234)9031109347</p>
               </div>
             </div>
 
@@ -1565,9 +1536,7 @@
           <div class="form-container">
             <h3>Send Us a Message</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit mauris
-              hendrerit faucibus imperdiet nec eget felis.
-            </p>
+              Send us a message today lets make you something not just beautiful but pocket friendly too.
 
             <form
               action="forms/contact.php"

@@ -4,9 +4,45 @@ Fashion House{% endblock %} {% block content %}
   <!-- Page Title -->
   <div class="page-title dark-background" data-aos="fade">
     <div class="container position-relative">
-      <h1>Our Services</h1>
-      <p>Luxury craftsmanship and personalized style solutions.</p>
-      <nav class="breadcrumbs">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-8">
+          <div class="page-title-content">
+            <h1 class="display-3 fw-bold mb-4 text-white">Our Services</h1>
+            <p class="lead text-light fw-light mb-4">
+              Luxury craftsmanship and personalized style solutions tailored to
+              elevate your wardrobe.
+            </p>
+            <div class="d-flex gap-3 align-items-center">
+              <div
+                class="accent-line"
+                style="
+                  width: 50px;
+                  height: 3px;
+                  background: linear-gradient(
+                    90deg,
+                    #d4af37 0%,
+                    transparent 100%
+                  );
+                "
+              ></div>
+              <span
+                class="text-uppercase fw-semibold letter-spacing"
+                style="letter-spacing: 2px; color: #d4af37; font-size: 0.85rem"
+                >Premium Fashion Solutions</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-flex justify-content-end">
+          <div
+            class="decorative-element"
+            style="font-size: 150px; opacity: 0.1; line-height: 1"
+          >
+            ✨
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs mt-4">
         <ol>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li class="current">Services</li>
@@ -16,78 +52,180 @@ Fashion House{% endblock %} {% block content %}
   </div>
   <!-- End Page Title -->
 
+  <!-- Services Intro Section -->
+  <section class="services-intro section">
+    <div class="container text-center" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="display-5 fw-bold mb-4">Elevate Your Style</h2>
+          <p class="fs-5 text-secondary mb-0">
+            At Nexa Fashion House, we offer comprehensive services designed to
+            help you discover and express your unique style. From bespoke
+            tailoring to exclusive access, each service is crafted with
+            precision and passion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services Grid Section -->
   <section id="services" class="services section">
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-5">
+        <!-- Service 1 -->
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-item">
-            <div class="service-icon">
-              <i class="bi bi-scissors"></i>
+          <div
+            class="service-item h-100 p-5 rounded-4 shadow-sm border border-light hover-shadow-lg transition-all"
+          >
+            <div class="service-icon mb-4">
+              <div
+                class="icon-bg rounded-circle d-inline-flex align-items-center justify-content-center"
+                style="
+                  width: 70px;
+                  height: 70px;
+                  background: linear-gradient(
+                    135deg,
+                    rgba(13, 110, 253, 0.1) 0%,
+                    rgba(13, 110, 253, 0.05) 100%
+                  );
+                "
+              >
+                <i class="bi bi-scissors fs-3 text-primary"></i>
+              </div>
             </div>
             <div class="service-content">
-              <h3 class="service-title">Bespoke Tailoring</h3>
-              <p class="service-text">
+              <h3 class="service-title fs-4 fw-bold mb-3">Bespoke Tailoring</h3>
+              <p class="service-text text-secondary mb-4 lh-lg">
                 Garments masterfully crafted to your exact proportions, using
-                the finest materials sourced from historic mills.
+                the finest materials sourced from historic mills. Our master
+                artisans work with precision to create pieces that fit your body
+                and express your style.
               </p>
-              <a href="{% url 'core:service-details' %}" class="service-link"
-                >Learn More →</a
+              <a
+                href="{% url 'core:service-details' %}"
+                class="service-link text-primary fw-semibold text-decoration-none d-inline-flex align-items-center gap-2 hover-effect"
               >
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
+        <!-- Service 2 -->
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-item">
-            <div class="service-icon">
-              <i class="bi bi-stars"></i>
+          <div
+            class="service-item h-100 p-5 rounded-4 shadow-sm border border-light hover-shadow-lg transition-all"
+          >
+            <div class="service-icon mb-4">
+              <div
+                class="icon-bg rounded-circle d-inline-flex align-items-center justify-content-center"
+                style="
+                  width: 70px;
+                  height: 70px;
+                  background: linear-gradient(
+                    135deg,
+                    rgba(13, 110, 253, 0.1) 0%,
+                    rgba(13, 110, 253, 0.05) 100%
+                  );
+                "
+              >
+                <i class="bi bi-stars fs-3 text-primary"></i>
+              </div>
             </div>
             <div class="service-content">
-              <h3 class="service-title">Personal Styling</h3>
-              <p class="service-text">
+              <h3 class="service-title fs-4 fw-bold mb-3">Personal Styling</h3>
+              <p class="service-text text-secondary mb-4 lh-lg">
                 Dedicated style consultants to help you curate a cohesive
-                wardrobe that captures your personal aesthetic.
+                wardrobe that captures your personal aesthetic. We analyze your
+                preferences, body type, and lifestyle to create a signature
+                look.
               </p>
-              <a href="{% url 'core:service-details' %}" class="service-link"
-                >Learn More →</a
+              <a
+                href="{% url 'core:service-details' %}"
+                class="service-link text-primary fw-semibold text-decoration-none d-inline-flex align-items-center gap-2 hover-effect"
               >
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
+        <!-- Service 3 -->
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-item">
-            <div class="service-icon">
-              <i class="bi bi-gem"></i>
+          <div
+            class="service-item h-100 p-5 rounded-4 shadow-sm border border-light hover-shadow-lg transition-all"
+          >
+            <div class="service-icon mb-4">
+              <div
+                class="icon-bg rounded-circle d-inline-flex align-items-center justify-content-center"
+                style="
+                  width: 70px;
+                  height: 70px;
+                  background: linear-gradient(
+                    135deg,
+                    rgba(13, 110, 253, 0.1) 0%,
+                    rgba(13, 110, 253, 0.05) 100%
+                  );
+                "
+              >
+                <i class="bi bi-gem fs-3 text-primary"></i>
+              </div>
             </div>
             <div class="service-content">
-              <h3 class="service-title">Private Curation</h3>
-              <p class="service-text">
+              <h3 class="service-title fs-4 fw-bold mb-3">Private Curation</h3>
+              <p class="service-text text-secondary mb-4 lh-lg">
                 Exclusive access to limited-edition runway pieces and rare
-                accessories before they reach our flagship galleries.
+                accessories before they reach our flagship galleries. Experience
+                VIP treatment and curated selections tailored to your taste.
               </p>
-              <a href="{% url 'core:service-details' %}" class="service-link"
-                >Learn More →</a
+              <a
+                href="{% url 'core:service-details' %}"
+                class="service-link text-primary fw-semibold text-decoration-none d-inline-flex align-items-center gap-2 hover-effect"
               >
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
+        <!-- Service 4 -->
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-item">
-            <div class="service-icon">
-              <i class="bi bi-camera-reels"></i>
+          <div
+            class="service-item h-100 p-5 rounded-4 shadow-sm border border-light hover-shadow-lg transition-all"
+          >
+            <div class="service-icon mb-4">
+              <div
+                class="icon-bg rounded-circle d-inline-flex align-items-center justify-content-center"
+                style="
+                  width: 70px;
+                  height: 70px;
+                  background: linear-gradient(
+                    135deg,
+                    rgba(13, 110, 253, 0.1) 0%,
+                    rgba(13, 110, 253, 0.05) 100%
+                  );
+                "
+              >
+                <i class="bi bi-camera-reels fs-3 text-primary"></i>
+              </div>
             </div>
             <div class="service-content">
-              <h3 class="service-title">Events & Trunk Shows</h3>
-              <p class="service-text">
+              <h3 class="service-title fs-4 fw-bold mb-3">
+                Events & Trunk Shows
+              </h3>
+              <p class="service-text text-secondary mb-4 lh-lg">
                 Be a part of our immersive fashion experiences, from private
-                atelier viewings to global runway events.
+                atelier viewings to global runway events. Connect with fellow
+                fashion enthusiasts and discover the artistry behind our
+                collections.
               </p>
-              <a href="{% url 'core:service-details' %}" class="service-link"
-                >Learn More →</a
+              <a
+                href="{% url 'core:service-details' %}"
+                class="service-link text-primary fw-semibold text-decoration-none d-inline-flex align-items-center gap-2 hover-effect"
               >
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -95,5 +233,52 @@ Fashion House{% endblock %} {% block content %}
     </div>
   </section>
   <!-- /Services Grid Section -->
+
+  <!-- CTA Section -->
+  <section
+    class="services-cta section"
+    style="
+      background: linear-gradient(
+        135deg,
+        rgba(212, 172, 55, 0.12) 0%,
+        rgba(212, 172, 55, 0.06) 100%
+      );
+    "
+  >
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center" data-aos="fade-up">
+          <h2 class="display-5 fw-bold mb-4">
+            Ready to Experience Excellence?
+          </h2>
+          <p class="fs-5 text-secondary mb-5">
+            Let our experts help you find the perfect service to transform your
+            style journey.
+          </p>
+          <a
+            href="{% url 'home' %}"
+            class="btn btn-lg rounded-pill px-5 py-3 fw-bold"
+            style="
+              background-color: #d4af37;
+              color: #0c0c0e;
+              border: 2px solid #d4af37;
+              transition: all 0.3s ease;
+            "
+            onmouseover="
+              this.style.backgroundColor = '#c99e2e';
+              this.style.borderColor = '#c99e2e';
+            "
+            onmouseout="
+              this.style.backgroundColor = '#d4af37';
+              this.style.borderColor = '#d4af37';
+            "
+          >
+            <i class="bi bi-telephone-fill me-2"></i> Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /CTA Section -->
 </main>
 {% endblock %}

@@ -1,0 +1,443 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Contact Us - Nexa
+Fashion House{% endblock %} {% block content %}
+<main class="main">
+  <!-- Page Title -->
+  <div class="page-title dark-background" data-aos="fade">
+    <div class="container position-relative">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-8">
+          <div class="page-title-content">
+            <h1 class="display-3 fw-bold mb-4 text-white">Contact Us</h1>
+            <p class="lead text-light fw-light mb-4">
+              Get in touch with our team for personalized styling, custom
+              orders, or inquiries.
+            </p>
+            <div class="d-flex gap-3 align-items-center">
+              <div
+                class="accent-line"
+                style="
+                  width: 50px;
+                  height: 3px;
+                  background: linear-gradient(
+                    90deg,
+                    #d4af37 0%,
+                    transparent 100%
+                  );
+                "
+              ></div>
+              <span
+                class="text-uppercase fw-semibold letter-spacing"
+                style="letter-spacing: 2px; color: #d4af37; font-size: 0.85rem"
+                >Let's Connect</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-flex justify-content-end">
+          <div
+            class="decorative-element"
+            style="font-size: 150px; opacity: 0.1; line-height: 1"
+          >
+            💬
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs mt-4">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <!-- Contact Information Panel -->
+        <div class="contact-info-panel">
+          <div class="contact-info-header">
+            <h3>Get In Touch</h3>
+            <p>
+              We're excited to hear from you! Whether you have questions about
+              our collections, want to schedule a styling session, or need
+              assistance with your order, our team is here to help.
+            </p>
+          </div>
+
+          <!-- Contact Information Cards -->
+          <div class="contact-info-cards">
+            <div class="info-card">
+              <div class="icon-container">
+                <i class="bi bi-pin-map-fill"></i>
+              </div>
+              <div class="card-content">
+                <h4>Visit Our Studio</h4>
+                <p>4952 Hilltop Dr, Anytown, CA 90210</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="icon-container">
+                <i class="bi bi-envelope-open"></i>
+              </div>
+              <div class="card-content">
+                <h4>Email Us</h4>
+                <p>
+                  <a href="mailto:nnannaigwesi@gmail.com"
+                    >nnannaigwesi@gmail.com</a
+                  >
+                </p>
+                <p>
+                  <a href="mailto:divineigwesi1184@gmail.com"
+                    >divineigwesi1184@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="icon-container">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div class="card-content">
+                <h4>Call Us</h4>
+                <p><a href="tel:+1234567890">+(234)8032882203</a></p>
+                <p><a href="tel:+1234567891">+(234)9031109347</a></p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="icon-container">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <div class="card-content">
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links Panel -->
+          <div class="social-links-panel">
+            <h5>Follow Our Journey</h5>
+            <p class="small text-muted mb-3">
+              Stay connected for latest collections and fashion inspiration
+            </p>
+            <div class="social-icons">
+              <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Panel -->
+        <div class="contact-form-panel">
+          <!-- Map Container -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00601!3d40.71455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb20001%3A0x123456789!2s4952%20Hilltop%20Dr%2C%20Anytown%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890123"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <!-- Form Container -->
+          <div class="form-container">
+            <h3>Send Us a Message</h3>
+            <p class="form-description">
+              Have a question or ready to elevate your wardrobe? Fill out the
+              form below and we'll get back to you within 24 hours.
+            </p>
+
+            <form
+              method="post"
+              action="{% url 'home' %}"
+              class="contact-form needs-validation"
+              id="contactForm"
+              novalidate
+            >
+              {% csrf_token %}
+
+              <!-- Name Field -->
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameInput"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                />
+                <label for="nameInput">Full Name</label>
+                <div class="invalid-feedback">
+                  Please provide your full name.
+                </div>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailInput"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                />
+                <label for="emailInput">Email Address</label>
+                <div class="invalid-feedback">
+                  Please provide a valid email address.
+                </div>
+              </div>
+
+              <!-- Phone Field -->
+              <div class="form-floating mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneInput"
+                  name="phone"
+                  placeholder="Phone Number"
+                />
+                <label for="phoneInput">Phone Number (Optional)</label>
+              </div>
+
+              <!-- Subject Field -->
+              <div class="form-floating mb-3">
+                <select
+                  class="form-control"
+                  id="subjectInput"
+                  name="subject"
+                  required
+                >
+                  <option value="">Select a subject...</option>
+                  <option value="custom-order">Custom Order Inquiry</option>
+                  <option value="styling-consultation">
+                    Styling Consultation
+                  </option>
+                  <option value="general-inquiry">General Inquiry</option>
+                  <option value="collaboration">
+                    Collaboration Opportunity
+                  </option>
+                  <option value="feedback">Feedback & Suggestions</option>
+                  <option value="other">Other</option>
+                </select>
+                <label for="subjectInput">Subject</label>
+                <div class="invalid-feedback">Please select a subject.</div>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  id="messageInput"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  style="height: 150px"
+                  required
+                ></textarea>
+                <label for="messageInput">Your Message</label>
+                <div class="invalid-feedback">Please provide a message.</div>
+              </div>
+
+              <!-- Form Feedback Messages -->
+              <div class="my-3" id="formFeedback">
+                <div
+                  class="alert alert-info d-none"
+                  id="loadingMessage"
+                  role="alert"
+                >
+                  <i class="bi bi-hourglass-split me-2"></i>Sending your
+                  message...
+                </div>
+                <div
+                  class="alert alert-danger d-none"
+                  id="errorMessage"
+                  role="alert"
+                >
+                  <i class="bi bi-exclamation-circle me-2"></i
+                  ><span id="errorText"></span>
+                </div>
+                <div
+                  class="alert alert-success d-none"
+                  id="successMessage"
+                  role="alert"
+                >
+                  <i class="bi bi-check-circle me-2"></i>Your message has been
+                  sent successfully! We'll contact you soon.
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="d-grid">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg"
+                  id="submitBtn"
+                >
+                  <i class="bi bi-send-fill me-2"></i>Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Contact Section -->
+
+  <!-- FAQ Section -->
+  <section id="faq-contact" class="faq section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="section-title text-center mb-5" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Find answers to common questions about our services and ordering
+          process
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="faq-wrapper">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item faq-active">
+              <div class="faq-header">
+                <div class="faq-icon">
+                  <i class="bi bi-question-circle"></i>
+                </div>
+                <h4>What is the typical turnaround time for custom orders?</h4>
+                <div class="faq-toggle">
+                  <i class="bi bi-plus"></i>
+                  <i class="bi bi-dash"></i>
+                </div>
+              </div>
+              <div class="faq-content">
+                <div class="content-inner">
+                  <p>
+                    Custom bespoke pieces typically require 4-8 weeks from
+                    initial consultation to delivery. This allows our master
+                    artisans to source premium materials and hand-craft your
+                    garment to perfection. Rush orders may be available upon
+                    request.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <div class="faq-icon">
+                  <i class="bi bi-question-circle"></i>
+                </div>
+                <h4>Do you offer international shipping?</h4>
+                <div class="faq-toggle">
+                  <i class="bi bi-plus"></i>
+                  <i class="bi bi-dash"></i>
+                </div>
+              </div>
+              <div class="faq-content">
+                <div class="content-inner">
+                  <p>
+                    Yes, we ship worldwide to over 50 countries. International
+                    orders are subject to customs duties and taxes which vary by
+                    country. We provide full tracking and insurance on all
+                    shipments. Contact us for shipping quotes and delivery
+                    estimates.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <div class="faq-icon">
+                  <i class="bi bi-question-circle"></i>
+                </div>
+                <h4>Can I schedule a private styling consultation?</h4>
+                <div class="faq-toggle">
+                  <i class="bi bi-plus"></i>
+                  <i class="bi bi-dash"></i>
+                </div>
+              </div>
+              <div class="faq-content">
+                <div class="content-inner">
+                  <p>
+                    Absolutely! We offer personalized styling sessions both
+                    in-studio and virtually. Our consultants will help you
+                    curate pieces that match your style, body type, and
+                    lifestyle. Contact us to book your consultation today.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <div class="faq-icon">
+                  <i class="bi bi-question-circle"></i>
+                </div>
+                <h4>What is your return and exchange policy?</h4>
+                <div class="faq-toggle">
+                  <i class="bi bi-plus"></i>
+                  <i class="bi bi-dash"></i>
+                </div>
+              </div>
+              <div class="faq-content">
+                <div class="content-inner">
+                  <p>
+                    We offer a 30-day return policy for items in original
+                    condition with tags attached. Custom and tailored pieces are
+                    final sales. Exchanges are available for size adjustments.
+                    Please contact our customer service team for details.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <div class="faq-icon">
+                  <i class="bi bi-question-circle"></i>
+                </div>
+                <h4>Do you collaborate with brands or influencers?</h4>
+                <div class="faq-toggle">
+                  <i class="bi bi-plus"></i>
+                  <i class="bi bi-dash"></i>
+                </div>
+              </div>
+              <div class="faq-content">
+                <div class="content-inner">
+                  <p>
+                    We're always open to exciting collaboration opportunities.
+                    If you're interested in partnering with Nexa Fashion House,
+                    please send us an email with your proposal to
+                    divineigwesi1184@gmail.com.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /FAQ Section -->
+</main>
+{% endblock %}

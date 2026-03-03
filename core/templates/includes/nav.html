@@ -12,7 +12,7 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="{% url 'home' %}" class="active">Home</a></li>
-        <li><a href="{% url 'core:about' %}">About</a></li>
+        <li><a href="{% url 'core:about_view' %}">About</a></li>
         <li><a href="{% url 'core:portfolio' %}">Collections</a></li>
         <li><a href="{% url 'core:services' %}">Services</a></li>
         <li class="dropdown">
@@ -29,12 +29,16 @@
             <li>
               <a href="{% url 'core:service-details' %}">Service Details</a>
             </li>
+            <!-- contact -->
+             <li>
+              <a href="{% url 'core:contact' %}">Contact</a>
+            </li>
           </ul>
         </li>
       </ul>
     </nav>
 
-    <a class="btn-getstarted" href="{% url 'home' %}#about">Explore Luxury</a>
+    <a class="btn-getstarted" href="{% url 'core:about_view' %}">Explore Luxury</a>
 
     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
   </div>

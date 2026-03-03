@@ -4,9 +4,44 @@ Fashion House{% endblock %} {% block content %}
   <!-- Page Title -->
   <div class="page-title dark-background" data-aos="fade">
     <div class="container position-relative">
-      <h1>Our Collections</h1>
-      <p>A journey through our most iconic seasons and visionary designs.</p>
-      <nav class="breadcrumbs">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-8">
+          <div class="page-title-content">
+            <h1 class="display-3 fw-bold mb-4 text-white">Our Collections</h1>
+            <p class="lead text-light fw-light mb-4">
+              A journey through our most iconic seasons and visionary designs.
+            </p>
+            <div class="d-flex gap-3 align-items-center">
+              <div
+                class="accent-line"
+                style="
+                  width: 50px;
+                  height: 3px;
+                  background: linear-gradient(
+                    90deg,
+                    #d4af37 0%,
+                    transparent 100%
+                  );
+                "
+              ></div>
+              <span
+                class="text-uppercase fw-semibold letter-spacing"
+                style="letter-spacing: 2px; color: #d4af37; font-size: 0.85rem"
+                >Luxury Collections</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-flex justify-content-end">
+          <div
+            class="decorative-element"
+            style="font-size: 150px; opacity: 0.1; line-height: 1"
+          >
+            👗
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs mt-4">
         <ol>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li class="current">Collections</li>

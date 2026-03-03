@@ -8,10 +8,46 @@
 {% block content %}
 <main class="main">
   <!-- Page Title -->
-  <div class="page-title dark-background">
+  <div class="page-title dark-background" data-aos="fade">
     <div class="container position-relative">
-      <h1>Service Details</h1>
-      <nav class="breadcrumbs">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-8">
+          <div class="page-title-content">
+            <h1 class="display-3 fw-bold mb-4 text-white">Service Details</h1>
+            <p class="lead text-light fw-light mb-4">
+              Discover how our premium services can transform your style and elevate your wardrobe.
+            </p>
+            <div class="d-flex gap-3 align-items-center">
+              <div
+                class="accent-line"
+                style="
+                  width: 50px;
+                  height: 3px;
+                  background: linear-gradient(
+                    90deg,
+                    #d4af37 0%,
+                    transparent 100%
+                  );
+                "
+              ></div>
+              <span
+                class="text-uppercase fw-semibold letter-spacing"
+                style="letter-spacing: 2px; color: #d4af37; font-size: 0.85rem"
+                >Premium Services</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-flex justify-content-end">
+          <div
+            class="decorative-element"
+            style="font-size: 150px; opacity: 0.1; line-height: 1"
+          >
+            🎀
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs mt-4">
         <ol>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'core:services' %}">Services</a></li>
@@ -30,19 +66,20 @@
             <img src="{% static 'img/services/services-8.webp' %}" alt="Service Image" class="img-fluid rounded">
           </div>
           <h2>Service Overview</h2>
-          <p>Our comprehensive service offerings are designed to meet the diverse needs of modern businesses. We combine technical expertise with strategic thinking to deliver solutions that drive real results.</p>
+          <p>Our bespoke tailoring service represents the pinnacle of personalized fashion. We create custom garments that reflect your unique style, body shape, and lifestyle needs using the finest materials from around the world.</p>
 
-          <h3 class="mt-4">Key Benefits</h3>
+          <h3 class="mt-4">The Bespoke Process</h3>
           <ul>
-            <li>Expert team with years of experience</li>
-            <li>Custom solutions tailored to your needs</li>
-            <li>Competitive pricing and flexible terms</li>
-            <li>Ongoing support and maintenance</li>
-            <li>Proven track record of success</li>
+            <li>In-depth consultation to understand your vision and preferences</li>
+            <li>Expert measurements and fitting analysis</li>
+            <li>Premium fabric selection from exclusive sources</li>
+            <li>Hand-crafted construction by master artisans</li>
+            <li>Multiple fittings to ensure perfect fit and drape</li>
+            <li>Final adjustments and quality assurance</li>
           </ul>
 
-          <h3 class="mt-4">Our Approach</h3>
-          <p>We follow a structured methodology to ensure project success, starting with a comprehensive assessment of your requirements, followed by careful planning, implementation, and continuous optimization.</p>
+          <h3 class="mt-4">Our Commitment</h3>
+          <p>Every bespoke piece is a masterpiece. We combine traditional tailoring techniques with contemporary design sensibilities to create garments that will be treasured for years to come.</p>
         </div>
 
         <div class="col-lg-4">
@@ -50,17 +87,17 @@
             <h4 class="mb-3">Service Information</h4>
             <div class="service-info-box">
               <ul>
-                <li><strong>Service Type:</strong> Web Development</li>
-                <li><strong>Duration:</strong> Varies by project</li>
-                <li><strong>Experience:</strong> 15+ years</li>
-                <li><strong>Team Size:</strong> 20+ professionals</li>
+                <li><strong>Service Type:</strong> Bespoke Tailoring</li>
+                <li><strong>Lead Time:</strong> 4-8 weeks</li>
+                <li><strong>Experience:</strong> 25+ years in couture</li>
+                <li><strong>Team:</strong> Master artisans & designers</li>
               </ul>
             </div>
 
             <div class="service-cta mt-4">
-              <h4>Ready to Get Started?</h4>
-              <p>Contact us today to discuss your project requirements and receive a customized proposal.</p>
-              <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+              <h4>Ready to Create Your Masterpiece?</h4>
+              <p>Schedule a private consultation with our design team to begin your bespoke journey.</p>
+              <a href="{% url 'home' %}" class="btn btn-primary">Book Consultation</a>
             </div>
           </div>
         </div>

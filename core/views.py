@@ -123,5 +123,8 @@ def download_resume(request):
         return response
     return render(request, '404.html', status=404)
 
-def about(request):
+def about_view(request):
     return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')

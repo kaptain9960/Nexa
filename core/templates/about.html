@@ -2,10 +2,47 @@
 Fashion House{% endblock %} {% block content %}
 <main class="main">
   <!-- Page Title -->
-  <div class="page-title" data-aos="fade">
-    <div class="container d-lg-flex justify-content-between align-items-center">
-      <h1 class="mb-2 mb-lg-0">About Our House</h1>
-      <nav class="breadcrumbs">
+  <div class="page-title dark-background" data-aos="fade">
+    <div class="container position-relative">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-8">
+          <div class="page-title-content">
+            <h1 class="display-3 fw-bold mb-4 text-white">About Our House</h1>
+            <p class="lead text-light fw-light mb-4">
+              Discover the heritage, passion, and vision that define Nexa
+              Fashion House.
+            </p>
+            <div class="d-flex gap-3 align-items-center">
+              <div
+                class="accent-line"
+                style="
+                  width: 50px;
+                  height: 3px;
+                  background: linear-gradient(
+                    90deg,
+                    #d4af37 0%,
+                    transparent 100%
+                  );
+                "
+              ></div>
+              <span
+                class="text-uppercase fw-semibold letter-spacing"
+                style="letter-spacing: 2px; color: #d4af37; font-size: 0.85rem"
+                >Our Story</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-flex justify-content-end">
+          <div
+            class="decorative-element"
+            style="font-size: 150px; opacity: 0.1; line-height: 1"
+          >
+            ✨
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs mt-4">
         <ol>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li class="current">About</li>
@@ -18,58 +55,141 @@ Fashion House{% endblock %} {% block content %}
   <!-- About Section -->
   <section id="about" class="about section">
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="row gy-4">
-        <div class="col-lg-6">
-          <img
-            src="{% static 'img/about/senator.jpeg' %}"
-            class="img-fluid rounded-4 mb-4"
-            alt="Heritage"
-          />
-          <h3>The Legacy of Nexa</h3>
-          <p>
-            Founded with a passion for exquisite design, Nexa Fashion House has
-            evolved from a bespoke studio into a world-renowned icon of
-            elegance. Our mission has always been to redefine luxury through a
-            blend of heritage techniques and avant-garde vision.
-          </p>
-          <p>
-            Every piece we create is a testament to our commitment to quality,
-            sustainability, and the empowerment of individuality.
-          </p>
-        </div>
-        <div class="col-lg-6">
-          <div class="content ps-0 ps-lg-5">
-            <p class="fst-italic">
-              "Fashion is not just what you wear; it is an extension of your
-              soul." — The Founder
-            </p>
-            <ul>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                <span>Meticulously sourced sustainable fabrics.</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                <span>Hand-stitched precision by master artisans.</span>
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                <span
-                  >Visionary designs that anticipate tomorrow's trends.</span
-                >
-              </li>
-            </ul>
-            <p>
-              Over the decades, we have mentored thousands of artisans and
-              collaborated with iconic figures to push the boundaries of style.
-              Today, Nexa continues to lead the industry with a focus on ethical
-              luxury and inclusive elegance.
-            </p>
+      <div class="row gy-5 align-items-stretch">
+        <!-- Image Column -->
+        <div class="col-lg-6 d-flex flex-column">
+          <div class="about-image-wrapper flex-shrink-0">
+            <img
+              src="{% static 'img/about/senator.jpeg' %}"
+              class="img-fluid rounded-4 shadow-lg w-100"
+              alt="Heritage"
+            />
+            <div class="image-overlay"></div>
+          </div>
 
-            <div class="active-video-btn mt-4">
+          <!-- About Header - Below Image -->
+          <div class="about-header mt-5">
+            <span class="section-label text-primary fw-bold">Our Heritage</span>
+            <h2 class="display-5 fw-bold mt-2 mb-4">The Legacy of Nexa</h2>
+            <p class="lead text-secondary fw-light">
+              Founded with a passion for exquisite design, Nexa Fashion House
+              has evolved from a bespoke studio into a world-renowned icon of
+              elegance. Our mission has always been to redefine luxury through a
+              blend of heritage techniques and avant-garde vision.
+            </p>
+            <p class="text-muted fs-5">
+              Every piece we create is a testament to our commitment to quality,
+              sustainability, and the empowerment of individuality.
+            </p>
+          </div>
+        </div>
+
+        <!-- Content Column - Full Height Writeup -->
+        <div class="col-lg-6 d-flex flex-column">
+          <div class="about-content ps-lg-5 d-flex flex-column h-100">
+            <!-- Founder Quote -->
+            <div
+              class="quote-section mb-4 p-4 border-start border-4 border-primary bg-gradient"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(13, 110, 253, 0.1) 0%,
+                  rgba(13, 110, 253, 0.05) 100%
+                );
+                border-radius: 0.5rem;
+              "
+            >
+              <p class="fst-italic fs-5 mb-0">
+                "Fashion is not just what you wear; it is an extension of your
+                soul."
+              </p>
+              <p class="text-muted mt-2 mb-0">— The Founder</p>
+            </div>
+
+            <!-- Key Values -->
+            <div class="values-section mb-4 flex-grow-1">
+              <h4 class="fw-bold mb-4">What Defines Us</h4>
+              <ul class="list-unstyled values-list">
+                <li class="mb-3">
+                  <div class="d-flex gap-3">
+                    <div class="flex-shrink-0">
+                      <i class="bi bi-check-circle-fill text-primary fs-5"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="fw-semibold mb-1">Sustainable Excellence</h5>
+                      <p class="text-muted mb-0">
+                        Meticulously sourced sustainable fabrics from ethical
+                        suppliers worldwide.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-3">
+                  <div class="d-flex gap-3">
+                    <div class="flex-shrink-0">
+                      <i class="bi bi-check-circle-fill text-primary fs-5"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="fw-semibold mb-1">Artisan Craftsmanship</h5>
+                      <p class="text-muted mb-0">
+                        Hand-stitched precision by master artisans with decades
+                        of expertise.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-3">
+                  <div class="d-flex gap-3">
+                    <div class="flex-shrink-0">
+                      <i class="bi bi-check-circle-fill text-primary fs-5"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h5 class="fw-semibold mb-1">Visionary Innovation</h5>
+                      <p class="text-muted mb-0">
+                        Designs that anticipate tomorrow's trends while honoring
+                        timeless elegance.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Story Paragraph -->
+            <div class="story-section mb-4">
+              <p class="fs-5 text-secondary">
+                Over the decades, we have mentored thousands of artisans and
+                collaborated with iconic figures to push the boundaries of
+                style. Today, Nexa continues to lead the industry with a focus
+                on ethical luxury and inclusive elegance.
+              </p>
+            </div>
+
+            <!-- Our Vision Section -->
+            <div class="vision-section mb-4">
+              <h5 class="fw-semibold mb-2">Our Vision</h5>
+              <p class="text-secondary mb-0">
+                We envision a world where fashion celebrates individuality and
+                respects our planet. Every piece from Nexa Fashion House is a
+                statement of personal power and environmental consciousness.
+              </p>
+            </div>
+
+            <!-- Commitment Section -->
+            <div class="commitment-section mb-4">
+              <h5 class="fw-semibold mb-2">Our Commitment</h5>
+              <p class="text-secondary mb-0">
+                We are committed to transparency in our supply chain, fair wages
+                for artisans, and sustainable production methods. Your purchase
+                supports a global community of skilled craftspeople.
+              </p>
+            </div>
+
+            <!-- Call to Action Button -->
+            <div class="cta-section mt-auto">
               <a
                 href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-                class="glightbox btn btn-outline-primary rounded-pill px-4 py-2"
+                class="glightbox btn btn-outline-primary rounded-pill px-5 py-3 fw-bold"
               >
                 <i class="bi bi-play-fill me-2"></i> Watch Our Story
               </a>
