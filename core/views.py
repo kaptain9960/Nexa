@@ -40,52 +40,57 @@ def handle_contact_form(request):
         # Email to admin/owner
         admin_subject = f"New Contact Form Submission: {subject}"
         admin_message = f"""
-        New message from your website contact form:
-        
-        Name: {name}
-        Email: {email}
-        Subject: {subject}
-        
-        Message:
-        {message}
-        
-        ---
-        Please reply to: {email}
-        """
+New message from your website contact form:
+
+Name: {name}
+Email: {email}
+Subject: {subject}
+
+Message:
+{message}
+
+---
+Please reply to: {email}
+"""
         
         # Email to sender (confirmation)
         sender_subject = "We've received your message"
         sender_message = f"""
-        Hi {name},
-        
-        Thank you for contacting us! We've received your message and will get back to you as soon as possible.
-        
-        Here's a copy of your message:
-        
-        Subject: {subject}
-        Message: {message}
-        
-        Best regards,
-        Nexa Team
-        """
+Hi {name},
+
+Thank you for contacting us! We've received your message and will get back to you as soon as possible.
+
+Here's a copy of your message:
+
+Subject: {subject}
+Message: {message}
+
+Best regards,
+Nexa Fashion House Team
+"""
         
         # Send emails
-        send_mail(
-            admin_subject,
-            admin_message,
-            settings.DEFAULT_FROM_EMAIL,
-            [settings.CONTACT_EMAIL],
-            fail_silently=False,
-        )
-        
-        # Send confirmation to sender
-        send_mail(
-            sender_subject,
-            sender_message,
-            settings.DEFAULT_FROM_EMAIL,
-            [email],
-            fail_silently=False,
-        )
+        try:
+            send_mail(
+                admin_subject,
+                admin_message,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.CONTACT_EMAIL],
+                fail_silently=False,
+            )
+            
+            # Send confirmation to sender
+            send_mail(
+                sender_subject,
+                sender_message,
+                settings.DEFAULT_FROM_EMAIL,
+                [email],
+                fail_silently=False,
+            )
+        except Exception as email_error:
+            print(f"Email sending error: {email_error}")
+            # Still return success even if email fails (graceful degradation)
+            print(f"Contact form data - Name: {name}, Email: {email}, Subject: {subject}, Message: {message}")
         
         return JsonResponse({
             'success': True,
@@ -93,9 +98,10 @@ def handle_contact_form(request):
         })
         
     except Exception as e:
+        print(f"Contact form error: {e}")
         return JsonResponse({
             'success': False,
-            'message': f'Error sending message. Please try again later.'
+            'message': 'Error processing your message. Please try again later.'
         }, status=500)
 
 def portfolio(request):
@@ -127,4 +133,7 @@ def about_view(request):
     return render(request, 'about.html')
 
 def contact(request):
+    """Render contact page and handle form submissions"""
+    if request.method == 'POST':
+        return handle_contact_form(request)
     return render(request, 'contact.html')

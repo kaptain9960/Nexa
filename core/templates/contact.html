@@ -162,7 +162,7 @@ Fashion House{% endblock %} {% block content %}
 
             <form
               method="post"
-              action="{% url 'home' %}"
+              action="{% url 'contact' %}"
               class="contact-form needs-validation"
               id="contactForm"
               novalidate
@@ -441,3 +441,68 @@ Fashion House{% endblock %} {% block content %}
   <!-- /FAQ Section -->
 </main>
 {% endblock %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Show loading message
+        document.getElementById("loadingMessage").classList.remove("d-none");
+        document.getElementById("errorMessage").classList.add("d-none");
+        document.getElementById("successMessage").classList.add("d-none");
+
+        // Disable submit button
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.disabled = true;
+
+        // Collect form data
+        const formData = new FormData(contactForm);
+
+        // Send form via fetch
+        fetch(contactForm.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            "X-Requested-With": "XMLHttpRequest",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("loadingMessage").classList.add("d-none");
+
+            if (data.success) {
+              // Show success message
+              document
+                .getElementById("successMessage")
+                .classList.remove("d-none");
+              // Reset form
+              contactForm.reset();
+              // Reset validation state
+              contactForm.classList.remove("was-validated");
+            } else {
+              // Show error message
+              document
+                .getElementById("errorMessage")
+                .classList.remove("d-none");
+              document.getElementById("errorText").textContent = data.message;
+            }
+          })
+          .catch((error) => {
+            document.getElementById("loadingMessage").classList.add("d-none");
+            document.getElementById("errorMessage").classList.remove("d-none");
+            document.getElementById("errorText").textContent =
+              "Error sending message. Please try again later.";
+            console.error("Error:", error);
+          })
+          .finally(() => {
+            // Re-enable submit button
+            submitBtn.disabled = false;
+          });
+      });
+    }
+  });
+</script>

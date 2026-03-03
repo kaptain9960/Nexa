@@ -84,18 +84,40 @@
         </div>
 
         <div class="col-lg-3">
+          <!-- Collection Details Card -->
           <div class="portfolio-info">
-            <h3>Collection Details</h3>
-            <ul>
-              <li><strong>Season</strong>: Spring/Summer 2024</li>
-              <li><strong>Collection Name</strong>: Midnight Velvet</li>
-              <li><strong>Launch Date</strong>: March 2024</li>
-              <li><strong>Collection Type</strong>: Evening Couture</li>
+            <div class="details-header mb-4">
+              <h3 class="mb-0" style="color: #d4af37; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px;">✨ Collection Details</h3>
+              <div style="width: 50px; height: 2px; background: linear-gradient(90deg, #d4af37 0%, transparent 100%); margin-top: 12px;"></div>
+            </div>
+            
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid rgba(212, 172, 55, 0.2);">
+                <strong style="color: #d4af37; font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Season</strong>
+                <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">Spring/Summer 2024</p>
+              </li>
+              <li style="margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid rgba(212, 172, 55, 0.2);">
+                <strong style="color: #d4af37; font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Collection Name</strong>
+                <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">Midnight Velvet</p>
+              </li>
+              <li style="margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid rgba(212, 172, 55, 0.2);">
+                <strong style="color: #d4af37; font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Launch Date</strong>
+                <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">March 2024</p>
+              </li>
+              <li style="margin-bottom: 0;">
+                <strong style="color: #d4af37; font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Collection Type</strong>
+                <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">Evening Couture</p>
+              </li>
             </ul>
           </div>
-          <div class="portfolio-description mt-4">
-            <h4>Collection Inspiration</h4>
-            <p>This exclusive collection draws inspiration from the elegance of twilight, combining luxurious velvet fabrics with innovative cutting techniques. Each piece tells a story of sophistication and timeless beauty.</p>
+
+          <!-- Collection Inspiration Card -->
+          <div class="portfolio-description mt-5" style="background: linear-gradient(135deg, rgba(212, 172, 55, 0.08) 0%, rgba(212, 172, 55, 0.02) 100%); padding: 30px; border-radius: 12px; border-left: 4px solid #d4af37;">
+            <h4 style="color: #f8f9fa; font-size: 1.3rem; font-weight: 600; margin-bottom: 16px; display: flex; align-items-center; gap: 10px;">
+              <i class="bi bi-lightbulb" style="color: #d4af37; font-size: 1.2rem;"></i>
+              Collection Inspiration
+            </h4>
+            <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.8; font-weight: 300; margin: 0;">This exclusive collection draws inspiration from the elegance of twilight, combining luxurious velvet fabrics with innovative cutting techniques. Each piece tells a story of sophistication and timeless beauty.</p>
           </div>
         </div>
       </div>
@@ -137,7 +159,7 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
         <h1 class="sitename">Nexa Fashion House</h1>
@@ -190,7 +212,7 @@
         <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             <li class="current">Portfolio Details</li>
           </ol>
         </nav>

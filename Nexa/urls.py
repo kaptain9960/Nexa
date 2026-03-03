@@ -23,6 +23,13 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('portfolio/', views.portfolio, name='portfolio'),
+    path('services/', views.services, name='services'),
+    path('portfolio-details/', views.portfolio_details, name='portfolio-details'),
+    path('service-details/', views.service_details, name='service-details'),
+    path('about/', views.about_view, name='about_view'),
+    path('contact/', views.contact, name='contact'),
+    path('download_resume/', views.download_resume, name='download_resume'),
     path('core/', include('core.urls')),
 ]
 
